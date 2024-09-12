@@ -1,0 +1,108 @@
+/* Skills.css */
+.skill-section {
+    background-color: #1b1b1b;
+    color: #ffffff;
+    padding: 80px 0;
+  }
+  
+  .skill-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .skill-table {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #333;
+  }
+  
+  .skill-header {
+    display: flex;
+    background-color: #2c2c2c;
+  }
+  
+  .skill-category-title {
+    flex: 1;
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    border-right: 1px solid #333;
+  }
+  
+  .skill-category-title:last-child {
+    border-right: none;
+  }
+  
+  .skill-body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .skill-row {
+    display: flex;
+  }
+  
+  .skill-cell {
+    flex: 1;
+    padding: 1rem;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .skill-cell:last-child {
+    border-right: none;
+  }
+  
+  .skill-row:last-child .skill-cell {
+    border-bottom: none;
+  }
+  
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .skill-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .skill-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  .skill-name {
+    font-size: 0.9rem;
+  }
+  
+  /* Color specific icons */
+  .html-icon { color: #e34f26; }
+  .css-icon { color: #264de4; }
+  .js-icon { color: #f7df1e; }
+  .ts-icon { color: #007acc; }
+  .react-icon { color: #61dafb; }
+  .node-icon { color: #339933; }
+  .python-icon { color: #3776ab; }
+  .php-icon { color: #777bb4; }
+  
+  @media (max-width: 768px) {
+    .skill-header, .skill-row {
+      flex-direction: column;
+    }
+  
+    .skill-category-title, .skill-cell {
+      border-right: none;
+      border-bottom: 1px solid #333;
+    }
+  
+    .skill-category-title:last-child, .skill-row:last-child .skill-cell:last-child {
+      border-bottom: none;
+    }
+  }
