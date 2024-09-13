@@ -7,7 +7,7 @@ import "../App.css"; // Importing App.css for styling
 
 export const Contact = () => {
   const [dialogMessage, setDialogMessage] = useState(""); // State for dialog message
-
+                                      
   function Submit(e) {
     e.preventDefault(); // Prevents the default form submission behavior
     const formEle = document.querySelector("form");
@@ -37,7 +37,7 @@ export const Contact = () => {
   }
 
   return (
-    <div className="contact">
+    <div id="contact" className="contact">
       <Container>
         <Row className="align-items-center">
           <Col md={6}>

@@ -12,7 +12,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Web Developer,", "Android Developer." ];
+  const toRotate = [ "Web Developer", "Android Developer" ];
   const period = 2000;
 
   useEffect(() => {
@@ -51,7 +51,7 @@ export const Banner = () => {
   return (
     <section className="banner" id="home">
       <Container>
-        <Row className="aligh-items-center">
+        <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
@@ -61,8 +61,8 @@ export const Banner = () => {
                   <p>Passionate Computer Science undergrad, graduating in 2026. Excited about web and Android development, and
                     Machine Learning. Proficient in various programming languages, frameworks, and ML concepts. A team player,
                     adaptable, and committed to growth. Ready to innovate in tech!</p>
-                  <Link to="connect" smooth={true} duration={1000}> {/* Link to Contact section */}
-                    <button>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  <Link to="contact" smooth={true} duration={50}> {/* Updated to scroll to contact section */}
+                    <button>Let's Connect <ArrowRightCircle size={25} /></button>
                   </Link>
               </div>}
             </TrackVisibility>
