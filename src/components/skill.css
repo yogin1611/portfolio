@@ -1,6 +1,5 @@
-/* Base styling for the skill section */
 .skill-section {
-  padding: 40px 15px; /* Add some padding for mobile screens */
+  padding: 40px 15px;
   background-color: #000000; /* Black background */
   color: #ffffff; /* White text color for contrast */
 }
@@ -8,77 +7,62 @@
 .skill-section h2 {
   text-align: center;
   margin-bottom: 30px;
-  font-size: 1.5rem; /* Slightly smaller font size for mobile */
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #ffffff; /* White text color */
+  color: #ffffff;
 }
 
-.skill-table {
+.skill-category {
+  margin-bottom: 20px;
+}
+
+.skill-category-header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  width: 100%; /* Ensure it takes full width */
-}
-
-.skill-header {
-  display: flex;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  justify-content: center;
-  margin-bottom: 10px;
-  width: 100%; /* Full width for alignment */
+  padding: 10px;
+  background-color: #333333;
+  color: #ffffff;
+  border: 1px solid #444444;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .skill-category-title {
-  flex: 1 1 100px; /* Allow flexible width and wrap */
-  text-align: center;
   font-weight: bold;
-  color: #ffffff; /* White text color */
-  padding: 10px;
-  background-color: #333333; /* Dark grey background for headers */
-  border: 1px solid #444444; /* Border to separate categories */
-  border-radius: 5px;
-  margin: 5px; /* Space between headers */
 }
 
-.skill-body {
+.toggle-icon {
+  font-size: 18px;
+}
+
+.skill-category-content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%; /* Ensure it takes full width */
-}
-
-.skill-row {
-  display: flex;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  justify-content: center;
-  margin-bottom: 20px;
-  width: 100%; /* Full width for alignment */
-}
-
-.skill-cell {
-  flex: 1 1 150px; /* Allow flexible width and wrap */
-  text-align: center;
+  flex-wrap: wrap; /* Allows skills to wrap on smaller screens */
+  gap: 10px; /* Space between skill items */
   padding: 10px;
 }
 
 .skill-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 10px;
+  flex: 1 1 auto;
+  padding: 5px 10px;
+  background-color: #444444;
+  border-radius: 5px;
 }
 
 .skill-icon {
-  font-size: 24px; /* Smaller icon size for mobile */
-  margin-bottom: 5px;
+  font-size: 24px;
+  margin-right: 10px;
 }
 
 .skill-name {
-  font-size: 12px; /* Smaller font size for mobile */
-  color: #ffffff; /* White text color */
+  font-size: 14px;
+  color: #ffffff;
 }
 
-/* Example specific icon styles */
+/* Specific icon styles */
 .html-icon { color: #e44b23; }
 .css-icon { color: #1572b6; }
 .js-icon { color: #f7e018; }
@@ -86,3 +70,4 @@
 .php-icon { color: #8993be; }
 .react-icon { color: #61dafb; }
 .node-icon { color: #68a063; }
+.angular-icon { color: #dd0031; }

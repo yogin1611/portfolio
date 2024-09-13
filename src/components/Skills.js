@@ -1,13 +1,16 @@
-import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Container, Collapse } from 'react-bootstrap';
 import { FaHtml5, FaCss3Alt, FaJs, FaPhp, FaPython, FaReact, FaNode, FaGithub, FaGitAlt, FaFigma, FaDocker, FaJava, FaAngular } from 'react-icons/fa';
 import { SiTypescript, SiCsharp, SiNextdotjs, SiExpress, SiFlutter, SiFirebase, SiMysql, SiMongodb, SiKotlin, SiCplusplus } from 'react-icons/si';
 import './skill.css'; // Make sure to update this CSS file
 
 export const Skills = () => {
+  const [openCategory, setOpenCategory] = useState(null);
+
   const skillCategories = [
     {
       name: 'Languages',
+      id: 'languages',
       skills: [
         { name: 'HTML', icon: <FaHtml5 className="html-icon" /> },
         { name: 'CSS', icon: <FaCss3Alt className="css-icon" /> },
@@ -21,6 +24,7 @@ export const Skills = () => {
     },
     {
       name: 'Frameworks',
+      id: 'frameworks',
       skills: [
         { name: 'Next.js', icon: <SiNextdotjs /> },
         { name: 'Express', icon: <SiExpress /> },
@@ -29,13 +33,15 @@ export const Skills = () => {
     },
     {
       name: 'Libraries',
+      id: 'libraries',
       skills: [
         { name: 'React', icon: <FaReact className="react-icon" /> },
-        { name: 'Angular', icon: <FaAngular className="react-icon" /> },
+        { name: 'Angular', icon: <FaAngular className="angular-icon" /> },
       ],
     },
     {
       name: 'Databases',
+      id: 'databases',
       skills: [
         { name: 'Firebase', icon: <SiFirebase /> },
         { name: 'MySQL', icon: <SiMysql /> },
@@ -44,14 +50,17 @@ export const Skills = () => {
     },
     {
       name: 'Tools',
+      id: 'tools',
       skills: [
         { name: 'Git', icon: <FaGitAlt /> },
         { name: 'GitHub', icon: <FaGithub /> },
         { name: 'Figma', icon: <FaFigma /> },
+        { name: 'Docker', icon: <FaDocker /> },
       ],
     },
     {
       name: 'Environments',
+      id: 'environments',
       skills: [
         { name: 'Node.js', icon: <FaNode className="node-icon" /> },
         { name: 'Docker', icon: <FaDocker /> },
@@ -59,38 +68,39 @@ export const Skills = () => {
     },
   ];
 
-  // Find the maximum number of skills in any category
-  const maxSkills = Math.max(...skillCategories.map(category => category.skills.length));
+  const handleToggle = (id) => {
+    setOpenCategory(openCategory === id ? null : id);
+  };
 
   return (
     <section className="skill-section" id="skills">
       <Container>
         <h2>Skills</h2>
-        <div className="skill-table">
-          <div className="skill-header">
-            {skillCategories.map((category, index) => (
-              <div key={index} className="skill-category-title">{category.name}</div>
-            ))}
-          </div>
-          <div className="skill-body">
-            {[...Array(maxSkills)].map((_, rowIndex) => (
-              <div key={rowIndex} className="skill-row">
-                {skillCategories.map((category, colIndex) => (
-                  <div key={colIndex} className="skill-cell">
-                    {category.skills[rowIndex] && (
-                      <div className="skill-item">
-                        <div className="skill-icon">
-                          {category.skills[rowIndex].icon}
-                        </div>
-                        <div className="skill-name">{category.skills[rowIndex].name}</div>
-                      </div>
-                    )}
+        {skillCategories.map((category) => (
+          <div key={category.id} className="skill-category">
+            <div
+              className="skill-category-header"
+              onClick={() => handleToggle(category.id)}
+            >
+              <span className="skill-category-title">{category.name}</span>
+              <span className="toggle-icon">
+                {openCategory === category.id ? '−' : '+'}
+              </span>
+            </div>
+            <Collapse in={openCategory === category.id}>
+              <div className="skill-category-content">
+                {category.skills.map((skill, index) => (
+                  <div key={index} className="skill-item">
+                    <div className="skill-icon">
+                      {skill.icon}
+                    </div>
+                    <div className="skill-name">{skill.name}</div>
                   </div>
                 ))}
               </div>
-            ))}
+            </Collapse>
           </div>
-        </div>
+        ))}
       </Container>
     </section>
   );
