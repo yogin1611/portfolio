@@ -1,6 +1,6 @@
-/* Ensure the background color is black */
+/* Base styling for the skill section */
 .skill-section {
-  padding: 40px 0;
+  padding: 40px 15px; /* Add some padding for mobile screens */
   background-color: #000000; /* Black background */
   color: #ffffff; /* White text color for contrast */
 }
@@ -8,7 +8,7 @@
 .skill-section h2 {
   text-align: center;
   margin-bottom: 30px;
-  font-size: 2rem;
+  font-size: 1.5rem; /* Slightly smaller font size for mobile */
   font-weight: bold;
   color: #ffffff; /* White text color */
 }
@@ -22,13 +22,14 @@
 
 .skill-header {
   display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
   justify-content: center;
   margin-bottom: 10px;
   width: 100%; /* Full width for alignment */
 }
 
 .skill-category-title {
-  flex: 1;
+  flex: 1 1 100px; /* Allow flexible width and wrap */
   text-align: center;
   font-weight: bold;
   color: #ffffff; /* White text color */
@@ -36,7 +37,7 @@
   background-color: #333333; /* Dark grey background for headers */
   border: 1px solid #444444; /* Border to separate categories */
   border-radius: 5px;
-  margin: 0 5px; /* Space between headers */
+  margin: 5px; /* Space between headers */
 }
 
 .skill-body {
@@ -48,13 +49,14 @@
 
 .skill-row {
   display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
   justify-content: center;
   margin-bottom: 20px;
   width: 100%; /* Full width for alignment */
 }
 
 .skill-cell {
-  flex: 1;
+  flex: 1 1 150px; /* Allow flexible width and wrap */
   text-align: center;
   padding: 10px;
 }
@@ -67,12 +69,12 @@
 }
 
 .skill-icon {
-  font-size: 32px; /* Adjust icon size for better visibility */
+  font-size: 24px; /* Smaller icon size for mobile */
   margin-bottom: 5px;
 }
 
 .skill-name {
-  font-size: 14px;
+  font-size: 12px; /* Smaller font size for mobile */
   color: #ffffff; /* White text color */
 }
 
