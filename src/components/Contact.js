@@ -51,8 +51,8 @@ export const Contact = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                  <h1>Contact Me Form</h1>
-                  <h2>This demonstrates how to send data from a website form to Google Sheets in React or Vanilla JS</h2>
+                  <h1>Contact Me</h1>
+                  <h2></h2>
                   <form className="form" onSubmit={(e) => Submit(e)}>
                     <input placeholder="Your Name" name="Name" type="text" />
                     <input placeholder="Your Email" name="Email" type="text" />
