@@ -1,1 +1,1 @@
-Deployed using Vercel on heerath.vercel.app
+Deployed using Vercel on https://heerath.vercel.app
