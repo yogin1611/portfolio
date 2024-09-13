@@ -570,8 +570,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .contact img {
-  width: 200%; /* Ensure the image fits well */
-  max-width: 500px; /* Adjust as needed */
+  width: 150%; /* Ensure the image fits well */
+  max-width: 350px; /* Adjust as needed */
   margin-bottom: 30px; /* Space below the image */
 }
 
