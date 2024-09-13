@@ -721,3 +721,155 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
+@media screen and (max-width: 768px) {
+  /* ... (keep existing mobile styles) ... */
+
+  /* Navbar mobile menu fixes */
+  .navbar-collapse {
+    background-color: #121212; /* Match your site's background color */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .navbar-nav {
+    padding-top: 0.5rem;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 0.5rem;
+  }
+
+  nav.navbar .navbar-nav .nav-link.navbar-link {
+    padding: 0.5rem 0;
+  }
+
+  .social-icon {
+    margin-top: 1rem;
+  }
+
+  .navbar-text {
+    padding-top: 1rem;
+  }
+
+  .navbar-text button {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+
+  /* Banner */
+  .banner {
+    padding: 150px 0 100px 0;
+  }
+  
+  .banner h1 {
+    font-size: 40px;
+  }
+  
+  .banner p {
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  /* Skills */
+  .skill-grid {
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: 1rem;
+  }
+  
+  .skill-icon {
+    font-size: 2rem;
+  }
+  
+  .skill-name {
+    font-size: 0.8rem;
+  }
+  
+  /* Projects */
+  .project h2 {
+    font-size: 35px;
+  }
+  
+  .project p {
+    width: 100%;
+  }
+  
+  .project .nav.nav-pills {
+    width: 100%;
+  }
+  
+  .project .nav.nav-pills .nav-link {
+    font-size: 15px;
+    padding: 10px 0;
+  }
+  
+  .proj-imgbx {
+    max-width: 100%;
+    height: 200px;
+  }
+  
+  .proj-txtx h4 {
+    font-size: 24px;
+  }
+  
+  .proj-txtx span {
+    font-size: 13px;
+  }
+  
+  /* Contact */
+  .contact h2 {
+    font-size: 35px;
+  }
+  
+  .contact form input, .contact form textarea {
+    padding: 14px 20px;
+    font-size: 16px;
+  }
+  
+  .contact form button {
+    padding: 12px 36px;
+    font-size: 16px;
+  }
+  
+  /* Footer */
+  .newsletter-bx {
+    padding: 50px 30px;
+  }
+  
+  .new-email-bx button {
+    padding: 15px 30px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Further adjustments for very small screens */
+  .banner h1 {
+    font-size: 32px;
+  }
+  
+  .skill-grid {
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  }
+  
+  .project .nav.nav-pills .nav-link {
+    font-size: 13px;
+  }
+  
+  .proj-imgbx {
+    height: 180px;
+  }
+  
+  .contact form button {
+    width: 100%;
+  }
+  
+  .footer-logo {
+    width: 80px;
+    height: 80px;
+  }
+}
