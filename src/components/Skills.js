@@ -63,7 +63,7 @@ export const Skills = () => {
       id: 'environments',
       skills: [
         { name: 'Node.js', icon: <FaNode className="node-icon" /> },
-        { name: 'Docker', icon: <FaDocker /> },
+        
       ],
     },
   ];
