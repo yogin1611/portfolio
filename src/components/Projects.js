@@ -22,8 +22,8 @@ export const Projects = () => {
       imgUrl: projImg2,
     },
     {
-      title: "Netflix Homepage Clone",
-      description: "Developed a clone of Netflix's homepage to hone front-end development skills. Gained proficiency in CSS layout techniques and responsive design.",
+      title: "Real-Time Object Detection with Web Integration",
+      description: "Developed Web based Real-Time Object Detection using YOLO v7 and YOLO v10 with ONNXRuntime and used NextJ for FrontEnd",
       imgUrl: projImg3,
     }
   ];
