@@ -62,7 +62,7 @@ export const NavBar = () => {
               <HashLink smooth to="#contact">
                 <button className="vvd"><span>Let's Connect</span></button>
               </HashLink>
-              <a href="/resume.pdf" download className="resume-download">
+              <a href="/resume-jan25.pdf" download className="resume-download">
                 <button className="vvd"><span>Download Resume</span></button>
               </a>
             </span>
